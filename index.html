@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Von Neumann Probe Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="screen">
+        <div id="game-container">
+            <h1>Von Neumann Probe Clicker</h1>
+            <div id="resources">
+                <div class="resource">
+                    <p>Metal: <span id="metal-count">0</span></p>
+                    <p class="generation">(+<span id="metal-gen">0</span>/s)</p>
+                    <button id="gather-metal">Gather Metal</button>
+                </div>
+                <div class="resource">
+                    <p>Energy: <span id="energy-count">0</span></p>
+                    <p class="generation">(+<span id="energy-gen">0</span>/s)</p>
+                    <button id="gather-energy">Gather Energy</button>
+                </div>
+                <div class="resource">
+                    <p>Rare Minerals: <span id="rare-minerals-count">0</span></p>
+                    <p class="generation">(+<span id="rare-minerals-gen">0</span>/s)</p>
+                </div>
+                <div class="resource">
+                    <p>Data: <span id="data-count">0</span></p>
+                    <p class="generation">(+<span id="data-gen">0</span>/s)</p>
+                </div>
+                <div class="resource">
+                    <p>Antimatter: <span id="antimatter-count">0</span></p>
+                    <p class="generation">(+<span id="antimatter-gen">0</span>/s)</p>
+                </div>
+            </div>
+            <div id="tabs">
+                <button class="tab-button active" data-tab="mining">Mining</button>
+                <button class="tab-button" data-tab="energy">Energy</button>
+                <button class="tab-button" data-tab="research">Research</button>
+                <button class="tab-button" data-tab="combat">Combat</button>
+            </div>
+            <div id="tab-content">
+                <div class="tab-pane active" id="mining-tab">
+                    <h2>Mining Probes</h2>
+                    <p>Count: <span id="mining-probe-count">0</span></p>
+                    <p>Level: <span id="mining-probe-level">1</span></p>
+                    <button id="build-mining-probe">Build Mining Probe</button>
+                    <button id="upgrade-mining-probe">Upgrade Mining Probe</button>
+                </div>
+                <div class="tab-pane" id="energy-tab">
+                    <h2>Energy Probes</h2>
+                    <p>Count: <span id="energy-probe-count">0</span></p>
+                    <p>Level: <span id="energy-probe-level">1</span></p>
+                    <button id="build-energy-probe">Build Energy Probe</button>
+                    <button id="upgrade-energy-probe">Upgrade Energy Probe</button>
+                </div>
+                <div class="tab-pane" id="research-tab">
+                    <h2>Research Probes</h2>
+                    <p>Count: <span id="research-probe-count">0</span></p>
+                    <p>Level: <span id="research-probe-level">1</span></p>
+                    <button id="build-research-probe">Build Research Probe</button>
+                    <button id="upgrade-research-probe">Upgrade Research Probe</button>
+                    <div id="research-section">
+                        <h3>Research</h3>
+                        <p>Research Points: <span id="research-points">0</span></p>
+                        <button id="gather-research">Gather Research</button>
+                        <div id="upgrade-list"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="combat-tab">
+                    <h2>Combat Probes</h2>
+                    <p>Count: <span id="combat-probe-count">0</span></p>
+                    <p>Level: <span id="combat-probe-level">1</span></p>
+                    <button id="build-combat-probe">Build Combat Probe</button>
+                    <button id="upgrade-combat-probe">Upgrade Combat Probe</button>
+                </div>
+            </div>
+            <div id="systems">
+                <p>Explored Systems: <span id="systems-count">0</span></p>
+            </div>
+            <button id="prestige-button">Prestige</button>
+            <canvas id="galaxyMap" width="500" height="500"></canvas>
+            <button id="save-game">Save Game</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
